@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     """Return homepage."""
     # TODO: Extract query term from url
-    #pull URL as a string
+    #pull URL as a string with requests
     #extract term from string
     # TODO: Make 'params' dict with query term and API key
     #define the params dictionary as query term/API key
