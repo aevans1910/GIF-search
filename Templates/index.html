@@ -1,11 +1,17 @@
 <!-- templates/index.html -->
 {% extends 'base.html' %}
+<head>
+    <link 
+        rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"
+    />
 
-{% block title %}
+    {% block title %}
 
-{% endblock %}
+    {% endblock %}
+</head>
 
-{% block content %}
+<body>
+{% block body %}
 
 
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
@@ -20,6 +26,13 @@
     <!-- We will make a search bar, in the type of google, where users will be able to 
         search for gifs, and then press on a submit button to then send their requests -->
 
+<div class="search_bar">
+    <input class="search_bar_text" type="text" name="" placeholder="Search">
+    <a class="search_button" href="#">
+
+    </a>
+</div>
+
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
     <!-- We are looping over all of the gifs that were passed to our machine/code 
@@ -31,3 +44,4 @@
         the gif.html page -->
 
 {% endblock %}
+</body>
