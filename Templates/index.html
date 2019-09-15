@@ -1,17 +1,5 @@
 <!-- templates/index.html -->
 {% extends 'base.html' %}
-<head>
-    <link 
-        rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"
-    />
-    <script src="https://kit.fontawesome.com/aa76d6ce90.js"></script>
-
-    {% block title %}
-
-    {% endblock %}
-</head>
-
-<body>
 {% block body %}
 
 
@@ -29,9 +17,9 @@
 
 <div class="search_bar">
     <input class="search_bar_text" type="text" name="" placeholder="Search">
-    <a class="search_button" href="#">
-    <i class="fas fa-search"></i>
-    </a>
+    <!-- <button type=“submit” class=“search_button”> -->
+        <i class="fas fa-search"></i>
+    <!-- </button> -->
 </div>
 
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
@@ -45,4 +33,3 @@
         the gif.html page -->
 
 {% endblock %}
-</body>
