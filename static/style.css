@@ -1,0 +1,13 @@
+body{
+    background-color: #bae1ff;   
+}
+.search_bar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #baffc9;
+    height: 35px;
+    border-radius: 35px;
+    padding: 5px;
+}
