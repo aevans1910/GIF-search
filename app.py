@@ -7,23 +7,26 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Return homepage."""
-    # TODO: Extract query term from url
-    #pull URL as a string with requests
-    #extract term from string
-    # TODO: Make 'params' dict with query term and API key
-    #define the params dictionary as query term/API key
-    #append extracted term from url to dictionary
-    # TODO: Make an API call to Tenor using the 'requests' library
-    #use requests library to call API
-    #append api to dictionary with same term
-    # TODO: Get the first 10 results from the search results
-    #call dictionary
-    #loop over 10 gif's
-    #display 10 gif's according to template
-    # TODO: Render the 'index.html' template, passing the gifs as a named parameter
-    #call templates and gif data
-    #render template
-    #pass gifs data into template
+    # TODO: Extract the query term from url using request.args.get()
+
+    # TODO: Make 'params' dictionary containing:
+    # a) the query term, 'q'
+    # b) your API key, 'key'
+    # c) how many GIFs to return, 'limit'
+
+    # TODO: Make an API call to Tenor using the 'requests' library. For 
+    # reference on how to use Tenor, see: 
+    # https://tenor.com/gifapi/documentation
+
+    # TODO: Use the '.json()' function to get the JSON of the returned response
+    # object
+
+    # TODO: Using dictionary notation, get the 'results' field of the JSON,
+    # which contains the GIFs as a list
+
+    # TODO: Render the 'index.html' template, passing the list of gifs as a
+    # named parameter called 'gifs'
+
     return render_template("index.html")
 
 if __name__ == '__main__':
