@@ -29,5 +29,9 @@ def index():
 
     return render_template("index.html")
 
+#This is the begining of the creation of the gif route
+# @app.route('/gif')
+#     def get_gif():
+
 if __name__ == '__main__':
     app.run(debug=True)
