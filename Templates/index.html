@@ -18,12 +18,21 @@
             <!-- We will make a search bar, in the type of google, where users will be able to 
                 search for gifs, and then press on a submit button to then send their requests -->
         
-        <div class="search_bar">
+        <form action="/">
+            <div class="search_bar">
+                <input class="search_bar_text" type="text" name="search" placeholder="Search" />
+                <button type="submit" class="search_button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- <div class="search_bar">
             <input class="search_bar_text" type="text" name="" placeholder="Search" />
             <button type="submit" class="search_button">
                 <i class="fas fa-search"></i>
             </button>
-        </div>
+        </div> -->
         
         
         <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->

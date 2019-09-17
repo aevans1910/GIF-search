@@ -10,14 +10,15 @@ def index():
     # Test
     print("entered route")
     # TODO: Extract the query term from url using request.args.get()
-    term = request.args.get('term')
+   
+    term = request.args.get('search')
 
     # TODO: Make 'params' dictionary containing:
     # a) the query term, 'q'
     # b) your API key, 'key'
     # c) how many GIFs to return, 'limit'
 
-    params = {"q": term, "key": "BG41AB43M6OC", 'limit': 1}
+    params = {"q": term, "key": "BG41AB43M6OC", 'limit': 10}
     gifs = None
 
     # TODO: Make an API call to Tenor using the 'requests' library. For 
