@@ -1,6 +1,9 @@
+/* Here is the code that create the background color */
 body{
     background-color:#6db5d8;
 }
+
+/* Here is the code that stylizes the search bar */
 .search_bar{
     position: absolute;
     top: 50%;
@@ -11,6 +14,8 @@ body{
     border-radius: 35px;
     padding: 5px;
 }
+
+/* Here is the code that stylizes the search button and its icon */
 button{
     border: none;
     background: none;
@@ -25,6 +30,8 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+/* Here is the code that stylizes the text in the search bar */
 .search_bar_text{
     border: none;
     background: none;
@@ -37,6 +44,7 @@ button{
     width: 200px;
 }
 
+/* Here is the code that stylizes the header */
 h1{
     color: #b4eeff;
     font-size: 100px;

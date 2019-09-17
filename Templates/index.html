@@ -1,13 +1,14 @@
 <!-- templates/index.html -->
+
+<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
+
+    <!-- We are creating a base/body for our gif search webpage so that it will 
+        look a certain way when someone loads it -->
 {% extends 'base.html' %}
 {% block body %}
 <div class= "page_title"> 
     <h1>GIF Search!</h1>
 </div>
-<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
-
-    <!-- We are creating a base/body for our gif search webpage so that it will 
-        look a certain way when someone loads it -->
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
@@ -29,9 +30,21 @@
     <!-- We are looping over all of the gifs that were passed to our machine/code 
         from the server/outside code -->
 
+<div class="gif">
+    {% for gif in gifs %}
+        <li>{{gifs}}</li>
+    {% endfor %}
+</div>
+
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 
     <!-- We are displaying each gif in a very particular format that we already created in 
         the gif.html page -->
+
+<div class = "display_gif">       
+    {% for gif in gifs %}
+        {% include 'gif.html' %}
+    {% endfor %}
+</div> 
 
 {% endblock %}
