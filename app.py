@@ -38,11 +38,14 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html")
+    return render_template(
+        "index.html",
+        gifs=results)
 
 #This is the begining of the creation of the gif route
 # @app.route('/gif')
 #     def get_gif():
+
 
 if __name__ == '__main__':
     app.run(debug=True)
