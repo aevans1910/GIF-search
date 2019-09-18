@@ -1,12 +1,15 @@
 /* Here is the code that create the background color */
 body{
     background-color:#6db5d8;
+    /* justify-content: center;
+    align-content: center;
+    align-items: center; */
 }
 
 /* Here is the code that stylizes the search bar */
 .search_bar{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     background:#9cd3f4;
@@ -50,4 +53,12 @@ h1{
     font-size: 100px;
     font-style: italic;
     text-align: center;
+}
+
+.display_gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
 }
