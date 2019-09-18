@@ -1,22 +1,16 @@
 
 <!-- templates/index.html -->
 ​
-<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
-​
-    <!-- We are creating a base/body for our gif search webpage so that it will 
-        look a certain way when someone loads it -->
+<!-- Creates a base/body for our gif search webpage so that it will 
+    look a certain way when someone loads it -->
         {% extends 'base.html' %}
         {% block body %}
         <div class= "page_title"> 
             <h1>GIF Search!</h1>
         </div>
-        
-        <!-- TODO: Make an HTML form containing a search box and a submit button to add
-            the search term to the query string. The form should have a target of '/' to
-            send us to the same route. -->
-        
-            <!-- We will make a search bar, in the type of google, where users will be able to 
-                search for gifs, and then press on a submit button to then send their requests -->
+                
+<!-- This code makes a search bar, in the type of Google, where users are able to 
+    search for gifs, and then press on a submit button to then send their requests -->
         
         <form action="/">
             <div class="search_bar">
@@ -27,34 +21,17 @@
             </div>
         </form>
 
-        <!-- <div class="search_bar">
-            <input class="search_bar_text" type="text" name="" placeholder="Search" />
-            <button type="submit" class="search_button">
-                <i class="fas fa-search"></i>
-            </button>
-        </div> -->
-        
-        
-        <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
-        
-            <!-- We are looping over all of the gifs that were passed to our machine/code 
-                from the server/outside code -->
-        
-        <!-- <div class="gif">
-            {% for gif in gifs %}
-                <li>{{gifs}}</li>
-            {% endfor %}
-        </div> -->
-        
-        <!-- TODO: For each gif, include the 'gif.html' template to display it -->
-        
-            <!-- We are displaying each gif in a very particular format that we already created in 
-                the gif.html page -->
-        
+<!-- This checks if there are gifs matching the parameters, if there are it returns the gifs in 
+    a loop as an unordered list if not it returns an error message -->
         <div class = "display_gif">       
-            {% for gif in gifs %}
-                {% include 'gif.html' %}
-            {% endfor %}
+            {% if gifs %}
+                {% for gif in gifs %}
+                    <ul>
+                        <li>{% include 'gif.html' %}</li>
+                    </ul>    
+                {% endfor %}
+            {% else %}
+                <h2>Whoops! Looks like there is nothing matching that search, please try again!</h2>
+            {% endif %}
         </div> 
-        
         {% endblock %}

@@ -1,9 +1,6 @@
 /* Here is the code that create the background color */
 body{
     background-color:#6db5d8;
-    /* justify-content: center;
-    align-content: center;
-    align-items: center; */
 }
 
 /* Here is the code that stylizes the search bar */
@@ -55,10 +52,25 @@ h1{
     text-align: center;
 }
 
+/* updates the h2 for the error message to match other formatting */
+h2{
+    color: #b4eeff;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* makes the gif display center and organized in a column */
 .display_gif{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 200px;
+}
+
+/* organizes the ul that house the gifs */
+ul{
+    list-style-type: none;
+    padding: 0;
 }
