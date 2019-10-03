@@ -1,3 +1,10 @@
+import os
+
+from dotenv import load_dotenv
+load_dotenv() 
+
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
+
 from flask import Flask, render_template, request
 import requests
 import json
@@ -15,7 +22,7 @@ def index():
 
     # Making 'params' dictionary containing the query term, our API key, 'key', and how many GIFs to return, 'limit'
 
-    params = {"q": term, "key": "BG41AB43M6OC", 'limit': 10}
+    params = {"q": term, "key": TENOR_API_KEY, 'limit': 10}
     gifs = None
 
     # Making an API call to Tenor using the 'requests' library. 
